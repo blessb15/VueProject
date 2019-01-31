@@ -12,9 +12,21 @@
                     <img :src="image" :alt="product">
                 </div>
                 <div class="product-info">
-                    <div>{{ product }}</div>
-                    <div v-if="inStock">In Stock</div>
+                    <div class="product-info-name">{{ product }}</div>
+                    <div v-if="inventory > 10">In Stock</div>
+                    <div v-else-if="inventory <= 10 && inventory > 0">Almost Gone!</div>
                     <div v-else>Out of Stock</div>
+                    <ul>
+                        <li v-for="detail in details">{{ detail }}</li>
+                    </ul>
+                    <label for="color-option">Color:</label>
+                    <select name="color-option">
+                        <option v-for="variant in variants" :key="variant.sku" >{{ variant.color }}</option>
+                    </select>
+                </div>
+                <button v-on:click="addToCart" type="button" name="button" class="add-to-cart">Add to Cart</button>
+                <div class="cart">
+                    <p>Cart: {{cart}}</p>
                 </div>
             </div>
         </div>

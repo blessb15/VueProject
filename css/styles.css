@@ -2,9 +2,46 @@ body, html {
     margin: 0px auto;
     padding: 0px auto;
 }
+.product {
+    text-align: left;
+    width: 350px;
+    margin: 20px;
+}
+.product-info {
+    display: inline-block;
+}
+.product-info ul {
+    padding: 0px 0px 0px 25px;
+}
 .product-image {
-    width: 20%;
+    width: 58%;
+    float: left;
+    display: inline-block;
 }
 .product-image img {
     width: 100%;
+}
+.product-info-name {
+    font-size: 33px;
+    font-weight: bold;
+}
+.cart {
+    display: inline-grid;
+    width: 33%;
+    height: 34px;
+    align-content: center;
+    color: #000000;
+    text-align: center;
+    border: 1px solid #d0d0d0;
+    float: right;
+}
+.add-to-cart {
+    display: inline-block;
+    color: white;
+    background-color: #2b8f56;
+    border: none;
+    border-radius: 3px;
+    width: 43%;
+    height: 35px;
+    float: left;
 }
