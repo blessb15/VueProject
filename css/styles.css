@@ -2,3 +2,9 @@ body, html {
     margin: 0px auto;
     padding: 0px auto;
 }
+.product-image {
+    width: 20%;
+}
+.product-image img {
+    width: 100%;
+}

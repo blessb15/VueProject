@@ -2,9 +2,24 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <title>Vue Test</title>
+        <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
+        <div id="app">
+            <div class="product">
+                <div class="product-image">
+                    <img :src="image" :alt="product">
+                </div>
+                <div class="product-info">
+                    <div>{{ product }}</div>
+                    <div v-if="inStock">In Stock</div>
+                    <div v-else>Out of Stock</div>
+                </div>
+            </div>
+        </div>
 
     </body>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.22/dist/vue.js"></script>
+    <script src="js/main.js"></script>
 </html>
