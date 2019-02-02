@@ -17,6 +17,7 @@ body, html {
     width: 58%;
     float: left;
     display: inline-block;
+    margin-right: 5%;
 }
 .product-image img {
     width: 100%;
