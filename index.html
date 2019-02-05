@@ -2,10 +2,18 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Vue Test</title>
+        <title></title>
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
+        <div id="header">
+          <div class="header-logo">
+
+          </div>
+          <div class="header-menu">
+
+          </div>
+        </div>
         <div id="app">
             <div class="product">
                 <div class="product-image">
@@ -19,12 +27,10 @@
                     <ul>
                         <li v-for="detail in details">{{ detail }}</li>
                     </ul>
-                    <label for="color-option">Color:</label>
-                    <select name="color-option">
-                        <option v-for="variant in variants" :key="variant.sku" >{{ variant.color }}</option>
-                    </select>
+                    <label for="color-option">Colors:</label>
+                    <div class="color-option" name="color-option" v-for="variant in variants" @mouseover="setColor(variant.image)" value="variant.sku">{{ variant.color }}</div>
                 </div>
-                <button v-on:click="addToCart" type="button" name="button" class="add-to-cart">Add to Cart</button>
+                <button @click="addToCart" type="button" name="button" class="add-to-cart">Add to Cart</button>
                 <div class="cart">
                     <p>Cart: ({{cart}})</p>
                 </div>
