@@ -1,19 +1,26 @@
 body, html {
     margin: 0px auto;
     padding: 0px auto;
+    font-family: arial;
 }
 #header {
   width: 100%;
   height: 65px;
   background-color: teal;
 }
+#app {
+    text-align: center;
+}
 .product {
+    display: inline-block;
     text-align: left;
-    width: 350px;
+    width: 420px;
     margin: 20px;
 }
 .product-info {
     display: inline-block;
+    position: relative;
+    left: 20px;
 }
 .product-info ul {
     padding: 0px 0px 0px 25px;
@@ -26,6 +33,7 @@ body, html {
 }
 .product-image img {
     width: 100%;
+    border: 1px solid gray;
 }
 .product-info-name {
     font-size: 33px;
@@ -33,6 +41,7 @@ body, html {
 }
 label {
   display: block;
+  margin-bottom: 8px;
 }
 .color-option {
   display: inline-block;
@@ -41,7 +50,7 @@ label {
 }
 .cart {
     display: inline-grid;
-    width: 33%;
+    width: 29%;
     height: 34px;
     align-content: center;
     color: #000000;
