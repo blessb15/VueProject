@@ -31,6 +31,7 @@
                     <div class="color-option" name="color-option" v-for="variant in variants" @mouseover="setColor(variant.image)" value="variant.sku">{{ variant.color }}</div>
                 </div>
                 <button @click="addToCart" type="button" name="button" class="add-to-cart">Add to Cart</button>
+                <button class="remove-from-cart" @click="removeFromCart">X</button>
                 <div class="cart">
                     <p>Cart: ({{cart}})</p>
                 </div>

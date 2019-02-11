@@ -32,10 +32,15 @@ var app = new Vue({
     },
     methods: {
         addToCart: function(){
-          this.cart += 1
+            this.cart += 1;
         },
         setColor: function(variantImage){
-          this.image = variantImage;
+            this.image = variantImage;
+        },
+        removeFromCart: function(){
+            if(this.cart != 0){
+                this.cart -= 1;
+            }
         }
     }
 });
