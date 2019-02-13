@@ -1,30 +1,31 @@
 var app = new Vue({
     el: '#app',
     data: {
+        brand: 'The Best',
         product: 'Socks',
         image: 'images/socks-bl.png',
-        inventory: 100,
+        inStock: true,
         details: ["100% cotton", "Gender-Neutral", "Strong"],
         variants: [
             {
                 sku:1234,
                 feel:"Soft",
                 type:"Long",
-                color:"Green",
+                color:"#329f65",
                 image:"images/socks-grn.png",
             },
             {
                 sku:1235,
                 feel:"Rough",
                 type:"Tough",
-                color:"Red",
+                color:"#9f4235",
                 image:"images/socks-red.png",
             },
             {
                 sku:1236,
                 feel:"Smooth",
                 type:"Comfort",
-                color:"Blue",
+                color:"#3581a0",
                 image:"images/socks-bl.png",
             }
         ],
@@ -41,6 +42,11 @@ var app = new Vue({
             if(this.cart != 0){
                 this.cart -= 1;
             }
+        }
+    },
+    computed: {
+        title() {
+            return this.brand + ' ' + this.product;
         }
     }
 });
