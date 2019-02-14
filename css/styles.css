@@ -35,6 +35,9 @@ body, html {
     width: 100%;
     border: 1px solid gray;
 }
+.shipping {
+    margin: 10px 0px;
+}
 .product-info-name {
     font-size: 22px;
     font-weight: bold;

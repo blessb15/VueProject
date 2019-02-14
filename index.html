@@ -15,26 +15,7 @@
           </div>
         </div>
         <div id="app">
-            <div class="product">
-                <div class="product-image">
-                    <img :src="image" :alt="product">
-                </div>
-                <div class="product-info">
-                    <div class="product-info-name">{{ title }}</div>
-                    <div v-if="inStock">In Stock</div>
-                    <div v-else>Out of Stock</div>
-                    <ul>
-                        <li v-for="detail in details">{{ detail }}</li>
-                    </ul>
-                    <label for="color-option">Colors:</label>
-                    <div v-for="(variant, index) in variants" @mouseover="updateProduct(index)" :style="{ backgroundColor: variant.color }" class="color-option" name="color-option" value="variant.sku"></div>
-                </div>
-                <button @click="addToCart" type="button" name="button" class="add-to-cart" :class="{ 'disabled-button': !inStock }" :disabled="!inStock" >Add to Cart</button>
-                <button class="remove-from-cart" @click="removeFromCart">X</button>
-                <div class="cart">
-                    <p>Cart: ({{cart}})</p>
-                </div>
-            </div>
+            <product></product>
         </div>
     </body>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.22/dist/vue.js"></script>
